@@ -1,0 +1,100 @@
+/* Definición de variables para colores */
+:root{
+    --orange: #3d0816;
+    --lightorange: #dd6662;
+    --verylightorange: #f89e8b;
+    --gray:#55557b;
+    --white:#fff; 
+}
+/*Estilo general de la página*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'century gothic', Courier, monospace;
+    background-color:var(--orange);
+}
+/* Estilo del encabezado */
+h1{
+    margin-top: 200px;
+    color: var(--white);
+    text-align: center;
+}
+/* Estilo del formulario */
+form{
+    /*border: 1px solid-> ayuda visual*/
+    width: 400px;
+    margin: 45px auto;
+    text-align: center;
+}
+form input[type="text"]{
+    background-color: var(--orange);
+    color: var(--white);
+    border-style: none;
+    font-size: 1.5em;
+}
+form input[type="text"]::placeholder{
+    color: var(--verylightorange);
+}
+/* Elimina el contorno al enfocar el input de texto */
+/*no se creará la línea al escribir*/
+form input[type="text"]:focus{
+    outline: none;
+}
+form input[type="submit"]{
+    font-size: 2em;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-style: none;
+    color: var(--orange);
+}
+form input[type="submit"]:hover{
+    background-color: var(--verylightorange);
+    cursor:pointer;
+    color: var(--white);
+}
+/* Estilo del contenedor de la lista de tareas  donde gurdo toas las tareas*/
+.list-container{  
+    width: 400px;
+    margin: 0 auto;
+    /*border: 1px solid;*/
+}
+/* Estilo de cada tarea en la lista */
+.task-container{
+    background-color: var(--verylightorange);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    padding: 16px;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: var(--gray);
+}
+/* Estilo del botón de cierre (borrar tarea) */
+.close-btn{
+    width: 15px;
+    height: 15px;
+}
+.close-btn:hover{
+    cursor: pointer;
+}
+/* Estilo de las estadísticas */
+#stats{
+    margin-top: 25px;
+    font-size: 1em;
+    color: var(--verylightorange);
+    text-align: center;
+}
+/* Estilo del footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--orange);
+    color: var(--white);
+    text-align: center;
+    padding: 10px;
+}
